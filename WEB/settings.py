@@ -20,7 +20,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='django-insecure-r+kk39t^z#r^d
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.WEB.app']
+ALLOWED_HOSTS = ['127.0.0.1', '.WEB.app','devlok.onrender.com']
 
 INSTALLED_APPS = [
     'embed_video',
