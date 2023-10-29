@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 <script src="https://cdn.tailwindcss.com"></script>
+		<title>Your Page Title</title><style>
+			@media screen and (device-width: 360px) and (device-height: 640px) and (min-resolution: 192dpi) and (-webkit-device-pixel-ratio: 3) {}
+		
+			@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {}
+		
+			@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {}
+		
+			::-webkit-scrollbar-track {
+			  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+			  border-radius: 8px;
+			  background-color: #808181;
+			  visibility: hidden;
+			}
+		
+			::-webkit-scrollbar {
+			  width: 8px;
+			  background-color: #d9d4d4;
+			}
+		
+			::-webkit-scrollbar-thumb {
+			  border-radius: 8px;
+			  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+			  background-color: #747373;
+			}
+		  </style>
+	</head>
+
+	<body class="">
+<nav class="bg-gray-200 fixed top-0 w-full z-10">
+	<div class="max-w-6xl mx-auto px-4">
+	  <div class="flex justify-between">  
+		<div class="flex space-x-4">	
+		  <div class="text-1xl font-extrabold ..." >
+			<a href="/" class="flex items-center py-5 px-2 text-white-700 hover:text-white-900">
+			 <img src="https://i.postimg.cc/0jscxwHC/icons8-code-100.png"
+			 style="width: 25px;height: 20px; text-emphasis-color: inherit;"/>
+			  <span class="bg-clip-text text-transparent bg-gradient-to-b from-pink-500 to-violet-500">Dev-Lok</span>
+			</a>
+		  </div>
+  
+		</div>
+		<div class="hidden md:flex items-center space-x-1">
+			<a href="/home" class="rounded-lg px-2 py-1  text-gray-800 hover:bg-green-300 duration-300">
+				<span class="inline-flex items-center rounded-md bg-purple-50 px-6 py-3 text-xs font-medium text-purple-700 ring-1 ring-inset ring-purple-700/10">
+					Index</span></a>
+					<a href="/admin" class="rounded-lg px-2 py-1  text-gray-800 hover:bg-green-300 duration-300">
+						<span class="inline-flex items-center rounded-md bg-purple-50 px-6 py-3 text-xs font-medium text-purple-700 ring-1 ring-inset ring-purple-700/10">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+							  </svg>
+							  &nbsp;Admin</span></a>
+		</div>
+		<div class="md:hidden flex items-center">
+		  <button class="mobile-menu-button">
+			<svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+			  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+			</svg>
+		  </button>
+		</div>
+  
+	  </div>
+	</div>	
+
+	<div class="mobile-menu hidden md:hidden">
+	  <a href="/home" class="block py-2 pl-3 pr-4 text-purple-700 text-center bg-gray-200 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:hover:bg-gray-500  dark:hover:text-white">
+		<span class="text-center">
+			Index</span></a>
+			<a href="/admin" class="block py-2 pl-3 pr-4 text-purple-700 text-center bg-gray-200 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:hover:bg-gray-500 dark:hover:text-white">
+				<span class="inline-flex items-center  px-6 py-3 text-xs font-medium text-white-700 ">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+					  </svg>&nbsp;
+					  Admin</span></a>
+	</div>
+  </nav> 
+		  
+			{% block page_content %}{%endblock%}
+	
+<script>	
+	const btn = document.querySelector("button.mobile-menu-button");
+	const menu = document.querySelector(".mobile-menu");
+	btn.addEventListener("click", () => {
+	  menu.classList.toggle("hidden");
+	});
+</script>
+<footer class="bg-gray-800 text-white py-4">
+	<div class="container mx-auto flex justify-between items-center">
+		<div class="text-2xl font-semibold">Dev</div>
+		<div class="flex space-x-4">
+			<a href="/about" class="text-gray-400 hover:text-white">About Us</a>
+			<a href="/contact" class="text-gray-400 hover:text-white">Contact</a>
+			<a href="/terms" class="text-gray-400 hover:text-white">Terms of Service</a>
+		</div>
+	</div>
+</footer>
+	</body>
+</html>

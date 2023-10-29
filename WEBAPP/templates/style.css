@@ -1,0 +1,7 @@
+.scrolled {
+    background-color: #333; /* Change the background color when scrolled */
+    transition: background-color 0.3s; /* Add a smooth transition effect */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow when scrolled */
+    /* Add any other styles you want for the scrolled navbar */
+  }
+  
